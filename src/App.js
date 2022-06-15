@@ -1,24 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  Button,
+  ButtonsDiv,
+  Container,
+  Counter,
+  LogoImage,
+  LogoTitle,
+  Main,
+  MainContent,
+  PresentationDiv,
+} from "./AppStyles";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import logo from "./assets/logo.png";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Header />
+
+      <Main>
+        <MainContent>
+          <PresentationDiv>
+            <LogoImage src={logo} alt="logo" />
+          </PresentationDiv>
+
+          <LogoTitle>Riot Games</LogoTitle>
+
+          <ButtonsDiv>
+            <Button>
+              <AiOutlineLeft color="#14061F" size={15} />
+            </Button>
+
+            <Counter>1/33</Counter>
+
+            <Button>
+              <AiOutlineRight color="#14061F" size={15} />
+            </Button>
+          </ButtonsDiv>
+        </MainContent>
+      </Main>
+      <Footer />
+    </Container>
   );
 }
 
