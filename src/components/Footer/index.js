@@ -39,7 +39,7 @@ export default function Footer() {
         <MusicControllers>
           <ImageIcon src={repeat} />
 
-          <MainControllers>
+          <MainControllers className="player_main">
             <ImageIcon src={chevronLeft} />
             <PlayButton>
               <ImageIcon src={play} style={{ width: 22, height: 22 }} />

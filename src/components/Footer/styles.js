@@ -41,6 +41,10 @@ export const FooterContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1080px) {
+    gap: 6px 18px;
+  }
 `;
 
 export const MusicInfo = styled.div`
@@ -50,6 +54,11 @@ export const MusicInfo = styled.div`
   display: grid;
   grid-template-columns: 32px 1fr;
   gap: 0 40px;
+
+  @media (max-width: 1080px) {
+    display: none;
+    visibility: hidden;
+  }
 `;
 
 export const IconLike = styled.img`
@@ -79,12 +88,33 @@ export const MusicControllers = styled.div`
   display: flex;
   align-items: center;
   column-gap: 100px;
+
+  @media (max-width: 1080px) {
+    column-gap: 24px;
+
+    .player-main {
+      column-gap: 6px;
+    }
+
+    img {
+      width: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 export const MainControllers = styled.div`
   display: flex;
   align-items: center;
   column-gap: 36px;
+
+  @media (max-width: 768px) {
+    column-gap: 28px;
+  }
 `;
 
 export const PlayButton = styled.button`
@@ -109,5 +139,18 @@ export const SideControllers = styled.div`
   img {
     width: 32px;
     height: auto;
+  }
+
+  @media (max-width: 1080px) {
+    column-gap: 24px;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    display: none;
+    visibility: hidden;
   }
 `;

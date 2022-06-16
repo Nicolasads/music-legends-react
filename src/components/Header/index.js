@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   HeaderTitle,
   Image,
   ImageDiv,
   Li,
+  MenuButton,
+  MenuButtonSpan,
   Nav,
   NavHeader,
   NavLink,
@@ -14,11 +16,24 @@ import {
 } from "./styles";
 
 export default function Header() {
+  const [visible, setVisible] = useState(false);
+
   return (
     <NavHeader>
-      <Container>
+      <Container className="nav-container">
+        <MenuButton
+          className={visible ? "isActive" : ""}
+          type="button"
+          onClick={() => setVisible(!visible)}
+        >
+          <MenuButtonSpan></MenuButtonSpan>
+          <MenuButtonSpan></MenuButtonSpan>
+          <MenuButtonSpan></MenuButtonSpan>
+          <MenuButtonSpan></MenuButtonSpan>
+        </MenuButton>
+
         <Nav>
-          <Ul>
+          <Ul className={visible ? "isActive" : ""}>
             <Li>
               <NavLink href="/">Início</NavLink>
             </Li>

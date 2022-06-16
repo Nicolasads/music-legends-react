@@ -7,12 +7,17 @@ import {
   LogoTitle,
   Main,
   MainContent,
+  MobileIcon,
+  MusicArtist,
+  MusicMobileInfo,
+  MusicTitle,
   PresentationDiv,
 } from "./AppStyles";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import logo from "./assets/logo.png";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import heart from "./assets/icons/heart.svg";
 
 function App() {
   return (
@@ -27,7 +32,7 @@ function App() {
 
           <LogoTitle>Riot Games</LogoTitle>
 
-          <ButtonsDiv>
+          <ButtonsDiv className="controllers">
             <Button>
               <AiOutlineLeft color="#14061F" size={15} />
             </Button>
@@ -38,6 +43,15 @@ function App() {
               <AiOutlineRight color="#14061F" size={15} />
             </Button>
           </ButtonsDiv>
+
+          <MusicMobileInfo className="music_mobile">
+            <MusicTitle>
+              Warriors
+              <MobileIcon src={heart} className="icon" />
+            </MusicTitle>
+
+            <MusicArtist>Riot Games ft. Imagine Dragons</MusicArtist>
+          </MusicMobileInfo>
         </MainContent>
       </Main>
       <Footer />
