@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   FooterContent,
@@ -22,8 +22,14 @@ import minimize from "../../assets/icons/minimize-2.svg";
 import rotate from "../../assets/icons/rotate-cw.svg";
 import volume from "../../assets/icons/volume-2.svg";
 import play from "../../assets/icons/play.svg";
+import pause from "../../assets/icons/pause.svg";
 
 export default function Footer() {
+  const [isPlaying, setIsplaying] = useState(false);
+  const playMusic = () => {
+    setIsplaying(!isPlaying);
+  };
+
   return (
     <Container>
       <TimeLine></TimeLine>
@@ -41,8 +47,11 @@ export default function Footer() {
 
           <MainControllers className="player_main">
             <ImageIcon src={chevronLeft} />
-            <PlayButton>
-              <ImageIcon src={play} style={{ width: 22, height: 22 }} />
+            <PlayButton onClick={() => playMusic()}>
+              <ImageIcon
+                src={isPlaying ? pause : play}
+                style={{ width: 22, height: 22 }}
+              />
             </PlayButton>
             <ImageIcon src={chevronRight} />
           </MainControllers>

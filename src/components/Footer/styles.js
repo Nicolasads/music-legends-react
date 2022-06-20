@@ -71,15 +71,16 @@ export const IconLike = styled.img`
 export const MusicTitle = styled.h2`
   color: ${(props) => props.theme.tertiary};
   font-size: 1.5rem;
-  line-height: 1.75rem;
+  line-height: 1rem;
   font-weight: ${(props) => props.theme.medium};
 `;
 
 export const MusicArtist = styled.h3`
   font-size: 1.125rem;
-  line-height: 1.25rem;
+  line-height: 1rem;
   font-weight: ${(props) => props.theme.medium};
   text-transform: uppercase;
+  color: ${(props) => props.theme.primary};
 `;
 
 export const ImageIcon = styled.img``;
